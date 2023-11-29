@@ -2,7 +2,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import '@mantine/core/styles.css';
 import { MantineProvider, ColorSchemeScript } from '@mantine/core';
-
+import NextTopLoader from 'nextjs-toploader';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -17,7 +17,9 @@ export default function RootLayout({ children }) {
         <ColorSchemeScript />
       </head>
       <body className={inter.className}>
+        <NextTopLoader/>
         <MantineProvider>{children}</MantineProvider></body>
+        
     </html>
   )
 }
